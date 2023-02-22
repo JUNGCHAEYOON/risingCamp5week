@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/iv_intro_kakaologinbtn"
-        android:layout_width="320dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
-        android:src="@drawable/kakao_login_medium_wide"
+        android:src="@drawable/kakao_login_medium_narrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -44,7 +44,8 @@
         android:id="@+id/tv_intro_tomainbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
         android:text="건너뛰기"
         android:textColor="@color/white"
         android:textSize="18dp"
