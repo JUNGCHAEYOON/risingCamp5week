@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.risingcamp5week.R
 
 class MatzipHorizontalAdapter(val itemList : ArrayList<MatzipHorizontalItem>) : RecyclerView.Adapter<MatzipHorizontalAdapter.MatzipHorizontalViewHolder>() {
@@ -29,7 +32,7 @@ class MatzipHorizontalAdapter(val itemList : ArrayList<MatzipHorizontalItem>) : 
         holder.tv_item_matzip_horizontal_writer.text = itemList[position].writer
 
         // 이미지 변경 부분, glide를 할지 setImageReSource를 할지 고민!
-        holder.iv_item_matzip_horizontal.setImageResource(itemList[position].image)
+        Glide.with(holder.itemView.context).load(itemList[position].image).transform(CenterCrop(), RoundedCorners(20)).into(holder.iv_item_matzip_horizontal)
     }
 
     override fun getItemCount(): Int {

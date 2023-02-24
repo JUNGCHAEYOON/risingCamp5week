@@ -2,17 +2,12 @@ package com.example.risingcamp5week.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.risingcamp5week.R
 import com.example.risingcamp5week.databinding.ActivityMainBinding
-import com.example.risingcamp5week.frag.*
-import com.kakao.sdk.auth.model.OAuthToken
-import com.kakao.sdk.common.model.ClientError
-import com.kakao.sdk.common.model.ClientErrorCause
-import com.kakao.sdk.user.UserApiClient
+import com.example.risingcamp5week.frag.mainfrag.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +20,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         // activity_main.xml 이 root 로 설정됨
         setContentView(binding.root)
+
+        /* introActivity 로 부터 넘겨받은 카카오톡 유저데이터를 mypageFragment 로 전달 */
+        val userName : String? = intent.getStringExtra("userName")
+        val userImageUrl : String?= intent.getStringExtra("userImageUrl")
+        // fragment 로 전달하기 위해 bundle 사용
+        val mypageFragment = MypageFragment()
+        val bundle = Bundle()
+        bundle.putString("userName", userName)
+        bundle.putString("userImageUrl", userImageUrl)
+        mypageFragment.arguments = bundle
+
 
         /* 바텀 네비게이션 */
         val bnv_main = binding.bnvMain
@@ -44,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                         // Respond to navigation item 1 click
                     }
                     R.id.item5 ->{
-                        MypageFragment()
+                        mypageFragment
                         // Respond to navigation item 1 click
                     }
                     else ->{

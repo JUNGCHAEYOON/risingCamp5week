@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_halin_eatdeal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background_orange"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_halin_eatdeal_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="[마포]"/>
+        <TextView
+            android:id="@+id/tv_halin_eatdeal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="고기집 이름"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginBottom="30dp"
+        android:id="@+id/tv_halin_eatdeal_menu"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="메뉴명"/>
+
+</LinearLayout>
