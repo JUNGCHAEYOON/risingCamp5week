@@ -57,12 +57,12 @@ class MatzipFragment : Fragment() {
         val itemList_vertical = ArrayList<MatzipVerticalItem>()
 
         // add
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.ikea512,"고양시 522m","이케아 레스토랑","양식/ 기타 양식","3.6","(리뷰 32)"))
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.thefesta600,"고양시 544m","더 페스타","양식/ 이탈리안","3.2","(리뷰 31)"))
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.bgdd512,"고양시 874m","버건디도어","카페/ 디저트","3.2","(리뷰 30)"))
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.kontai512,"고양시 458m","콘타이(이케아 고양점)","세계음식/ 태국음식","3.3","(리뷰 9)"))
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.coffetosta512,"고양시 557m","커피토스타","카페/ 디저트","3.2","(리뷰 2)"))
-        itemList_vertical.add(MatzipVerticalItem(R.drawable.americantrailor350,"고양시 458m","아메리칸트레일러","카페/ 디저트","3.0","(리뷰 1)"))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.ikea512,"고양시 522m","이케아 레스토랑","양식/ 기타 양식","3.6","(리뷰 32)",37.62952779385139, 126.86311704725081))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.thefesta600,"고양시 544m","더 페스타","양식/ 이탈리안","3.2","(리뷰 31)",37.62638025481359, 126.87324785223427))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.bgdd512,"고양시 874m","버건디도어","카페/ 디저트","3.2","(리뷰 30)",37.62728816160029, 126.85721915663338))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.kontai512,"고양시 458m","콘타이(이케아 고양점)","세계음식/ 태국음식","3.3","(리뷰 9)",37.62907493389039, 126.86263075305223))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.coffetosta512,"고양시 557m","커피토스타","카페/ 디저트","3.2","(리뷰 2)",37.63035753308983, 126.87188165633245))
+        itemList_vertical.add(MatzipVerticalItem(R.drawable.americantrailor350,"고양시 458m","아메리칸트레일러","카페/ 디저트","3.0","(리뷰 1)",37.64322463641078, 126.78968985817387))
 
         // 어댑터
         val matzipVerticalAdapter = MatzipVerticalAdapter(itemList_vertical)

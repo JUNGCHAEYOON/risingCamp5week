@@ -1,15 +1,21 @@
 package com.example.risingcamp5week.recycler
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.risingcamp5week.R
+import com.example.risingcamp5week.main.LocationActivity
+import com.example.risingcamp5week.main.MainActivity
 
 class MatzipVerticalAdapter (val itemList : ArrayList<MatzipVerticalItem>) : RecyclerView.Adapter<MatzipVerticalAdapter.MatzipVerticalViewHolder>(){
     inner class MatzipVerticalViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
@@ -39,6 +45,15 @@ class MatzipVerticalAdapter (val itemList : ArrayList<MatzipVerticalItem>) : Rec
         holder.tv_item_matzip_vertical_foodtype.text = itemList[position].foodtype
         holder.tv_item_matzip_vertical_point.text = itemList[position].point
         holder.tv_item_matzip_vertical_review.text = itemList[position].review
+
+        // 아이템뷰 클릭
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, LocationActivity::class.java)
+            intent.putExtra("title",itemList[position].title)
+            intent.putExtra("lat",itemList[position].lat)
+            intent.putExtra("long",itemList[position].long)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

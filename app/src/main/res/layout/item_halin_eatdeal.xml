@@ -12,13 +12,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="10dp"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_halin_eatdeal_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22dp"
+            android:textSize="18dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:text="[마포]"/>
@@ -26,18 +26,18 @@
             android:id="@+id/tv_halin_eatdeal_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22dp"
+            android:textSize="18dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:text="고기집 이름"/>
     </LinearLayout>
     <TextView
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/tv_halin_eatdeal_menu"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         android:text="메뉴명"/>
 
