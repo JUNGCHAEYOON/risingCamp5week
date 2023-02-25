@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.risingcamp5week.R
 
 class HalinEatdealAdapter (val itemList : ArrayList<HalinEatdealItem>): RecyclerView.Adapter<HalinEatdealAdapter.HalinEatdealViewHolder>(){
@@ -26,7 +27,7 @@ class HalinEatdealAdapter (val itemList : ArrayList<HalinEatdealItem>): Recycler
 
     override fun onBindViewHolder(holder: HalinEatdealViewHolder, position: Int) {
         // iv
-        holder.iv_halin_eatdeal.setImageResource(itemList[position].image)
+        Glide.with(holder.itemView.context).load(itemList[position].image).into(holder.iv_halin_eatdeal)
 
         // tv
         holder.tv_halin_eatdeal_location.text = itemList[position].location

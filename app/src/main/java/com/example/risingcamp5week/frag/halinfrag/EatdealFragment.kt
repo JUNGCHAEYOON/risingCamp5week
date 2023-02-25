@@ -28,12 +28,11 @@ class EatdealFragment : Fragment() {
         val rv_halin_eatdeal = view.findViewById<RecyclerView>(R.id.rv_halin_eatdeal)
         val itemList = ArrayList<HalinEatdealItem>()
 
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
-        itemList.add(HalinEatdealItem(R.drawable.background_orange,"[마포]","등촌 갈비","소갈비"))
+        itemList.add(HalinEatdealItem(R.drawable.samgyeop300,"[마포]","월화고기상암점","삼겹살세트"))
+        itemList.add(HalinEatdealItem(R.drawable.moksal300,"[마포]","월화고기상암점","목살세트"))
+        itemList.add(HalinEatdealItem(R.drawable.coffee300,"[연희동]","컨시어지 커피","카페라떼 2잔"))
+        itemList.add(HalinEatdealItem(R.drawable.americano300,"[연희동]","컨시어지 커피","아메리카노"))
+
 
         val halinEatdealAdapter = HalinEatdealAdapter(itemList)
         halinEatdealAdapter.notifyDataSetChanged()
