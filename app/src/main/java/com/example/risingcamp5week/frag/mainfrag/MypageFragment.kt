@@ -36,7 +36,7 @@ class MypageFragment : Fragment() {
         if (userName != null) {
             Log.d(TAG,userName )
         }else{
-            Log.d(TAG,"전달 안됬어요씨발" )
+            Log.d(TAG,"전달 안됬어요" )
         }
 
         // 이미지뷰, 텍스트뷰에 넣기
